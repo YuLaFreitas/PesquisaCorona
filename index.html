@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de perguntas</title>
+    <script src="script/scripts.js"></script>
+    <link href="stilos/stilos.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 </head>
@@ -10,105 +12,122 @@
 
 <header>
  <div>
-     <H1>Perguntas:</H1>
+     <H1></H1>
  </div>
 </header>
 
 <main>
-<DIV id="per1" CLASS="COL">
-    <H2>COMO O ESTÁ SE SENTINDO:</H2>
-    <DIV class="ROW">
-    <label>FADIGA:
-    <input type="checkbox" name="FADIGA"  VALUE="FADIGA" />
-
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        FALTA DE AR:
-        <input type="checkbox" name="ASFIXIA"  VALUE="ASFIXIA"/>
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        DOR DE CABEÇA:
-        <input type="checkbox" name="ACEFALIA"  VALUE="ACEFALIA">
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        DORES MUSCULARES:
-        <input type="checkbox" name="DORES"  VALUE="DORES">
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        QUEDA DE CABELO:
-        <input type="checkbox" name="CABELO"  VALUE="CABELO">
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        DISTÚRBIO DE OFATO OU PALADAR:
-        <input type="checkbox" name="PALADAR"  VALUE="PALADAR">
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        DORES NO PEITO:
-        <input type="checkbox" name="ATACARDIA"  VALUE="ATACARDIA">
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        TONTURA:
-        <input type="checkbox" name="TONTURA"  VALUE="TONTURA">
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-    <label>
-        TROMBOSES (INCHASSO)
-        <input type="checkbox" name="TROMBOSE"  VALUE="TROMBOSES">
-    </label>
-    </DIV>
-
-    <DIV class="ROW">
-        <label>
-         PALPITAÇÕES
-    <input type="checkbox" name="PALPITACOES"  VALUE="PALPITACOES">
+    <DIV id="per1" CLASS="COL">
+        <H2>COMO ESTÁ SE SENTINDO:</H2>
+        <label onclick="pegarValor('fadiga','chk1')">
+            <img src="imgs\fadiga.jpg" alt="fadiga" />
+            <DIV class="ROW">
+                FADIGA:
+                <input type="checkbox" id="chk1" name="FADIGA" VALUE="FADIGA" />
+            </DIV>
         </label>
-    </DIV>
+        <div id="fadiga"></div>
+        <label onclick="pegarValor('asfixia','chk2')">
+            <img src="imgs\falta_ar.jpg" alt="FALTA DE AR" />
+            <DIV class="ROW">
 
-    <DIV class="ROW">
-        <label>
-        DEPREÇÃO:
-    <input type="checkbox" name="DEPRESSAO"  VALUE="DEPREÇÃO">
+                FALTA DE AR:
+                <input type="checkbox"  id="chk2" name="ASFIXIA" VALUE="ASFIXIA" />
+
+            </DIV>
         </label>
-    </DIV>
+        <div id="asfixia"></div>
+        <label onclick="pegarValor('cefalia','chk3')">
+            <img src="imgs\dor_cabeca.png" alt="DOR DE CABEÇA" />
+            <DIV class="ROW">
 
-    <DIV class="ROW">
-        <label>
-        ANSIEDADE:
-        <input type="checkbox" name="ANSIEDADE"  VALUE="ANSIEDADE">
+                DOR DE CABEÇA:
+                <input type="checkbox"  id="chk3" name="CEFALIA" VALUE="CEFALIA">
+            </DIV>
         </label>
-    </DIV>
-
-    <DIV class="ROW">
-        <label>
-            DIFICULDADE NA FALA, RECIOCÍNIO, E MEMÓRIA:
-        <input type="checkbox" name="NEUROLOGIA"  VALUE="NEUROLOGIA">
+        <div id="cefalia"></div>
+        <label onclick="pegarValor('muscular','chk4')">
+            <img src="imgs\dor_muscular.jpg" alt="dor muscular" />
+            <DIV class="ROW">
+               
+                    DORES MUSCULARES:
+                    <input type="checkbox"  id="chk4" name="DORES" VALUE="DORES">
+                 </DIV>
         </label>
+        <div id="muscular"></div>
+        <label onclick="pegarValor('cabelo','chk5')">
+            <img src="imgs\queda-de-cabelo.jpg" alt="Queda de cabelo" />
+            <DIV class="ROW">
+                QUEDA DE CABELO:
+                <input type="checkbox"  id="chk5" name="CABELO" VALUE="CABELO">
+            </DIV>
+        </label>
+        <div id="cabelo"></div>
+        <label onclick="pegarValor('paladar','chk6')">
+            <img src="imgs\PALADAR.png" alt="falta de paladar" />
+            <DIV class="ROW">
+                DISTÚRBIO DE OFATO OU PALADAR:
+                <input type="checkbox"  id="chk6" name="PALADAR" VALUE="PALADAR">
+            </DIV>
+        </label>
+        <div id="paladar"></div>
+        <label onclick="pegarValor('atacardia','chk7')">
+            <img src="imgs\dor_peito.jpg" alt="Dor no peito" />
+            <DIV class="ROW">
+                DORES NO PEITO:
+                <input type="checkbox"  id="chk7" name="ATACARDIA" VALUE="ATACARDIA">
+            </DIV>
+        </label>
+        <div id="atacardia"></div>
+        <label onclick="pegarValor('tontura','chk8')">
+            <img src="imgs\tontura.png" alt="Tontura" />
+            <DIV class="ROW">
+                TONTURA:
+                <input type="checkbox"  id="chk8" name="TONTURA" VALUE="TONTURA">
+            </DIV>
+        </label>
+        <div id="tontura"></div>
+        <label onclick="pegarValor('trombose','chk9')">
+            <img src="imgs\trombose.png" alt="Trombose" />
+            <DIV class="ROW">
+                TROMBOSES (INCHASSO)
+                <input type="checkbox"  id="chk9" name="TROMBOSE" VALUE="TROMBOSES">
+            </DIV>
+        </label>
+        <div id="trombose"></div>
+        <label onclick="pegarValor('palpitacao','chk10')">
+            <img src="imgs\palpitação-de-coração.jpg" alt="Palpitações" />
+            <DIV class="ROW">
+                PALPITAÇÕES
+                <input type="checkbox"  id="chk10" name="PALPITACOES" VALUE="PALPITACOES">
+            </DIV>
+        </label>
+        <div id="palpitacao"></div>
+        <label onclick="pegarValor('depressao','chk11')">
+            <img src="imgs\DEPRESSAO.png" alt="Depressao" />
+            <DIV class="ROW">
+                DEPRESSÃO:
+                <input type="checkbox"  id="chk11" name="DEPRESSAO" VALUE="DEPREÇÃO">
+            </DIV>
+        </label>
+        <div id="depressao"></div>
+        <label onclick="pegarValor('ansiedade','chk12')">
+            <img src="imgs\ansiedade.jpg" alt="Ansiedade" />
+            <DIV class="ROW">
+                ANSIEDADE:
+                <input  type="checkbox"  id="chk12" name="ANSIEDADE" VALUE="ANSIEDADE"/>
+            </DIV>
+        </label>
+        <div id="ansiedade"></div>
+        <label onclick="pegarValor('neuro','chk13')">
+            <img src="imgs\memoria-ideia-raciocionio.jpg" alt="Dificuldade em recioncionar ou lembrar" />
+            <DIV class="ROW">
+                DIFICULDADE NA FALA, RECIOCÍNIO, E MEMÓRIA:
+                <input type="checkbox"  id="chk13" name="NEUROLOGIA" VALUE="NEUROLOGIA">
+            </DIV>
+        </label>
+        <div id="neuro"></div>
     </DIV>
-
-</DIV>
 
 </main>
 
